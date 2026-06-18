@@ -11,7 +11,10 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 ALLOWED_HOSTS = [
     "crms.tomcaliento.com",
     "www.crms.tomcaliento.com",
+    "api.crms.tomcaliento.com",
+    "api.tomcaliento.com",
     "127.0.0.1",
+    "localhost",
 ]
 
 CORS_ALLOWED_ORIGINS = [
