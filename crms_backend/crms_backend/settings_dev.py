@@ -14,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # TODO: Turn off in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1:8000', '127.0.0.1', 'localhost',]
+ALLOWED_HOSTS = [ '127.0.0.1', 'localhost',]
 
 WEBSITE_URL = '127.0.0.1:8000'
 
@@ -82,7 +82,7 @@ ROOT_URLCONF = 'crms_backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

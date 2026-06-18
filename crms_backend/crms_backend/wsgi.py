@@ -1,8 +1,10 @@
-
+# crms_backend/crms_backend/wsgi.py
 import os
-
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'crms_backend.settings')
+os.environ.setdefault(
+    'DJANGO_SETTINGS_MODULE',
+    'crms_backend.settings_prod'
+)
 
 application = get_wsgi_application()
