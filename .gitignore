@@ -41,8 +41,7 @@ db.sqlite3
 media
 .DS_Store
 
-crms_backend/settings_dev.py
-settings_dev.py
+
 
 
 # Backup files # 
