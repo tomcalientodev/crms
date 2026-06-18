@@ -1,0 +1,55 @@
+Steps to Run Locally:
+
+Intro:
+1. Download the zip file onto your local drive (not cloud).
+2. Dowload Python and Node.js.
+3. Download Vite with npm install vite.
+4. (Windows Powershell only) In terminal run: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process OR use bash shell
+ so you don't have script blocking issues due to insufficient priveleges.
+
+Backend:
+3. Create your venv and activate (Windows E.g. .\myenv\Scripts\Activate.ps1)
+4. Download requirements.txt programs into your venv.
+5. Start backend: python3 manage.py runserver
+Error Thrown? run python3 manage.py migrate.
+
+Frontend:
+- In the crms_frontend directory make sure a file called: .env.development is present. If it's not make it and add one line: VITE_API_URL=http://127.0.0.1:8000.
+- Make sure there is a package.json file in the crms_frontend folder. If there isn't see the bottom of this document for it's contents.
+- cd in to crms_frontend in a bash terminal and type: npm install (must be run in the directory that contains the package.json file). 
+This should install Tailwind and pinia and any other packages needed for the frontend.
+- run: npm run dev.
+- Go to link displayed by frontend and create a user on website. Add dummy data as needed.
+
+
+
+package.json file below
+
+{
+  "name": "crms_frontend",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.1.5",
+    "vite-plugin-vue-devtools": "^7.0.16"
+  }
+}
