@@ -1,54 +1,26 @@
-from datetime import timedelta
-from pathlib import Path
-from dotenv import load_dotenv
 import os
-
+from dotenv import load_dotenv
+from pathlib import Path
+from datetime import timedelta
+from dotenv import load_dotenv
 load_dotenv()
-SECRET_KEY = os.environ.get('SECRET_KEY')
 
+
+
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-
-# TODO: Turn off in production!
-DEBUG = True
-
-ALLOWED_HOSTS = [ '127.0.0.1', 'localhost',]
-
-WEBSITE_URL = '127.0.0.1:8000'
-
-# Application definition
-SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(hours=12),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=180),
-    'ROTATE_REFRESH_TOKENS': False,
-}
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.AllowAny',
     )
 }
-
-CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:5173",
-    "http://127.0.0.1:8000",
-    "http://localhost:5173",
-    "http://localhost:8000",
-]
-
-CSRF_TRUSTED_ORIGINS = [
-    "http://127.0.0.1:5173",
-    "http://127.0.0.1:8000",
-    "http://localhost:5173",
-    "http://localhost:8000",
-]
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -79,6 +51,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'crms_backend.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -95,12 +68,6 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'crms_backend.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -109,8 +76,7 @@ DATABASES = {
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
+WSGI_APPLICATION = 'crms_backend.wsgi.application'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -131,12 +97,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/4.1/topics/i18n/
-
-
-
-
 TIME_INPUT_FORMATS = ('%I:%M %p',)
 
 LANGUAGE_CODE = 'en-us'
@@ -147,30 +107,13 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-
-# from django.contrib.messages import constants as messages
-# MESSAGE_TAGS = {
-#     messages.ERROR: 'danger',
-# }
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.1/howto/static-files/
-
-STATIC_URL = 'static/'
-
-STATICFILES_DIRS = (
-    os.path.join(os.path.dirname(__file__), BASE_DIR, 'static'),
-)
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
-
-
-
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'accounts.User'
-

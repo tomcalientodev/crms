@@ -11,6 +11,8 @@ import "./assets/main.css";
 // console.log('URL', import.meta.env.VITE_API_URL)
 axios.defaults.baseURL = import.meta.env.VITE_API_URL;
 
+console.log('URL:', import.meta.env.VITE_API_URL);
+
 const app = createApp(App);
 
 const pinia = createPinia();
@@ -21,3 +23,4 @@ const userStore = useUserStore(pinia);
 userStore.router = router; // Pass router instance to store
 
 app.mount("#app");
+
