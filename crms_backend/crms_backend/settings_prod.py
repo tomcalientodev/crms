@@ -28,6 +28,8 @@ logging.debug(f'SECRET_KEY: {SECRET_KEY}')
 DEBUG = False
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
     'crms.tomcaliento.com',
     'www.crms.tomcaliento.com',
 ]
@@ -127,16 +129,7 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'crms_backend',
-#         'USER': 'root',
-#         'PASSWORD': 'HotFuss73!',
-#         'HOST':'127.0.0.1',
-#         'PORT':'3306',
-#     }
-# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
