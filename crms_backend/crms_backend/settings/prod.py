@@ -20,11 +20,13 @@ ALLOWED_HOSTS = [
 CORS_ALLOWED_ORIGINS = [
     "https://crms.tomcaliento.com",
     "https://www.crms.tomcaliento.com",
+    "https://api.crms.tomcaliento.com",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://crms.tomcaliento.com",
     "https://www.crms.tomcaliento.com",
+    "https://api.crms.tomcaliento.com",
 ]
 
 # Application definition
