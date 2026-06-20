@@ -34,10 +34,7 @@
               </div>
             </template>
   
-            <div class="flex justify-between items-center">
-              <router-link :to="{ name: 'forgot_password' }" class="underline text-blue-500 hover:text-blue-800">Forgot Password?</router-link>
-              <button type="submit" class="py-4 px-6 bg-green-400 text-white rounded-lg">Log in</button>
-            </div>
+
           </form>
         </div>
       </div>
