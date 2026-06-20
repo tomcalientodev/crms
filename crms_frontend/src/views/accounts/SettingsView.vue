@@ -12,11 +12,6 @@
                                 Employee Management
                             </a>
                         </li>
-                        <li>
-                            <a href="#cancel-subscription" class="block py-2 px-4 hover:bg-gray-300 rounded">
-                                Cancel Subscription
-                            </a>
-                        </li>
                     </ul>
                 </nav>
     </aside>
