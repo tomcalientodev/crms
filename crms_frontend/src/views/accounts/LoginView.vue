@@ -40,7 +40,7 @@
 
           </form>
 
-            <div class="bg-white border border-yellow-200 rounded-lg p-4 mb-4">
+            <div class="bg-white border border-yellow-200 rounded-lg p-4 mb-4 mt-4">
               <p class="font-semibold text-gray-800 mb-2">Demo Login Credentials</p>
               <p class="text-gray-700">
                 <span class="font-medium">Email:</span>
@@ -48,7 +48,7 @@
                 <span class="font-medium">Password:</span> DemoPassword123!
               </p>
             </div>
-            
+
         </div>
       </div>
     </div>
