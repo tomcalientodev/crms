@@ -39,6 +39,16 @@
             </div>
 
           </form>
+
+            <div class="bg-white border border-yellow-200 rounded-lg p-4 mb-4">
+              <p class="font-semibold text-gray-800 mb-2">Demo Login Credentials</p>
+              <p class="text-gray-700">
+                <span class="font-medium">Email:</span>
+                alincoln@libertyautoparts.demo<br />
+                <span class="font-medium">Password:</span> DemoPassword123!
+              </p>
+            </div>
+            
         </div>
       </div>
     </div>
