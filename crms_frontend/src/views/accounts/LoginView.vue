@@ -33,7 +33,10 @@
                 <p v-for="error in errors" v-bind:key="error">{{ error }}</p>
               </div>
             </template>
-  
+             
+              <div class="flex justify-between items-center">
+              <button type="submit" class="py-4 px-6 bg-green-400 text-white rounded-lg">Log in</button>
+            </div>
 
           </form>
         </div>
