@@ -41,18 +41,20 @@
                 <p class="text-lg text-gray-500">{{ customer.user.phone_number }}</p>
               </div>
             </div>
-
-            <!-- <div class="flex flex-col space-y-2">
-              <div v-if="editingCustomer">
+            <div class="flex flex-col space-y-2">
+             
+             <!-- <div v-if="editingCustomer">
                 <input v-model="customer.user.email" class="border border-gray-300 rounded-lg p-1 w-full focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all" />
               </div>
               <div v-else>
                 <p class="text-lg text-gray-500">{{ customer.user.email }}</p>
               </div> -->
-              <div class="flex flex-col space-y-2">
+
+  
                 <p class="text-lg text-gray-500">
                   {{ customer.user.email }}
                 </p>
+                
               </div>
 
               <!--Editing Pencil-->
